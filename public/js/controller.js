@@ -196,6 +196,7 @@ myApp.controller("confirmCtrl",function($scope,$http,ToFlightService,clientServi
     $scope.TimeFrom=ToFlightService.getBookedFlight().flightDepature;
     $scope.TimeTo=ToFlightService.getBookedFlight().flightDepature;
     $scope.flightID=ToFlightService.getBookedFlight().id;
+    $scope.flightPrice=ToFlightService.getBookedFlight().flightPrice;
 
      $scope.ClientBooked=clientService.getDetails();
      console.log($scope.ClientBooked);
