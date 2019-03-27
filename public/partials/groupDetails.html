@@ -1,0 +1,146 @@
+<div class="container">
+<div class="row"  ng-repeat="person in people">
+        <form class="userform">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                          <label for="inputTitle">Title:</label>  <b>{{person.number}}</b>
+                          <select id="inputTitle" class="form-control" ng-model="groupClient.title">
+                            <option>Mr.</option>
+                            <option>Mrs.</option>
+                            <option>Ms.</option>
+                          </select>
+                    </div>
+                    <div class="form-group col-md-4" style="display:inline-block"  >
+                            <label for="inputTitle">Date of Birth:</label>
+                            <select id="inputTitle" class="form-control"  style="width:100px" ng-model="groupClient.Bday">
+                              <option>01</option>
+                              <option>02</option>
+                              <option>03</option>
+                              <option>04</option>
+                              <option>05</option>
+                              <option>06</option>
+                              <option>07</option>
+                              <option>08</option>
+                              <option>09</option>
+                              <option>10</option>
+                              <option>11</option>
+                              <option>12</option>
+                              <option>13</option>
+                              <option>14</option>
+                              <option>15</option>
+                              <option>16</option>
+                              <option>17</option>
+                              <option>18</option>
+                              <option>19</option>
+                              <option>20</option>
+                              <option>21</option>
+                              <option>22</option>
+                              <option>23</option>
+                              <option>24</option>
+                              <option>25</option>
+                              <option>26</option>
+                              <option>27</option>
+                              <option>28</option>
+                              <option>29</option>
+                              <option>30</option>
+                              <option>31</option>
+                            </select>
+                      </div>
+                      <div class="form-group col-md-4">
+                            <label for="inputTitle"></label>
+                            <select id="inputTitle" class="form-control"  style="width:100px;" ng-model="groupClient.Bmonth">
+                                    <option>Jan</option>
+                                    <option>Feb</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>Jun</option>
+                                    <option>July</option>
+                                    <option>Aug</option>
+                                    <option>Sept</option>
+                                    <option>Oct</option>
+                                    <option>Nov</option>
+                                    <option>Dec</option>
+                            </select>
+                      </div>
+                      <div class="form-group col-md-4">
+                            <label for="inputTitle"></label>
+                            <select id="inputTitle" class="form-control"  style="width:100px;" ng-model="groupClient.Byear">
+                                    <option>1970</option>
+                                    <option>1971</option>
+                                    <option>1972</option>
+                                    <option>1973</option>
+                                    <option>1974</option>
+                                    <option>1975</option>
+                                    <option>1976</option>
+                                    <option>1977</option>
+                                    <option>1978</option>
+                                    <option>1979</option>
+                                    <option>1980</option>
+                                    <option>1981</option>
+                                    <option>1982</option>
+                                    <option>1983</option>
+                                    <option>1984</option>
+                                    <option>1985</option>
+                                    <option>1986</option>
+                                    <option>1987</option>
+                                    <option>1988</option>
+                                    <option>1989</option>
+                                    <option>1990</option>
+                                    <option>1991</option>
+                                    <option>1992</option>
+                                    <option>1993</option>
+                                    <option>1994</option>
+                                    <option>1995</option>
+                                    <option>1996</option>
+                                    <option>1997</option>
+                                    <option>1998</option>
+                                    <option>1999</option>
+                                    <option>2001</option>
+                                    <option>2002</option>
+                                    <option>2003</option>
+                                    <option>2004</option>
+                                    <option>2005</option>
+                            </select>
+                      </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">First Names:</label>
+                      <input type="text" class="form-control" id="inputEmail4" placeholder="firstname" ng-model="groupClient.firstname" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputSurname">Surname:</label>
+                      <input type="text" class="form-control" id="inputsurname" placeholder="surname" ng-model="groupClient.surname">
+                    </div>
+                </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputAddress">Email:</label>
+                    <input type="email" class="form-control" id="inputemail" placeholder="Please enter email" ng-model="groupClient.email">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputMobile">Mobile number:</label>
+                    <input type="text" class="form-control" id="inputmobile" placeholder="Please Enter number" ng-model="groupClient.mobile">
+                  </div>
+                      <a href="" class="btn btn-primary btn-lg" ng-click="getBookedGroupD(groupClient)" >Submit</a>
+                      <hr style="width: 100%; height: 2px; background-color: black"> 
+                      
+                 
+                </form>
+   </div>
+   <div class="row">
+     <form action="" >
+        
+
+          <input type="hidden" name="merchant_id" value="10000100">
+          <input type="hidden" name="merchant_key" value="46f0cd694581a">
+          <input type="hidden" name="amount" value="100.00">
+          <input type="hidden" name="item_name" value="Test Item">
+          <!--<input type="hidden" name="return_url" value="https://www.yoursite.com/return">
+          <input type="hidden" name="cancel_url" value="https://www.yoursite.com/cancel">
+          <input type="hidden" name="notify_url" value="https://www.yoursite.com/notify">-->
+
+          
+     </form>
+     <input type="submit" class="btn btn-primary" id="groupClientDetails" value="Payment" ng-click="getBookedGroupTotal()">
+   
+   </div>
+  </div>

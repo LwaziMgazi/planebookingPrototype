@@ -1,0 +1,88 @@
+<div class="container" >
+    <div class="row">
+         <div class="col-sm-4">
+            <div >
+                <label for="inputFrom">From:</label>
+                    <select  class="form-control" ng-model="groupClient.from">
+                        <option>Durban</option>
+                        <option>CapeTown</option>
+                        <option>Joburg</option>
+                        <option>P.E</option>
+                    </select>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <label for="inputFrom">To:</label>
+            <select id="inputTitle" class="form-control" ng-model="groupClient.to">
+                <option>Durban</option>
+                <option>CapeTown</option>
+                <option>Joburg</option>
+                <option>P.E</option>
+            </select>
+        </div>
+        <div class="col-sm-4">
+            <br>
+            <a class="btn btn-block  btn-primary"  ng-click="available()">Availability</a>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 2%">
+        <div class="col-sm-4">
+            <label for="inputTitle">Number of People Booking:</label>
+            <select id="inputTitle" class="form-control"  style="width:100px" ng-model="groupClient.NoOfPeople">
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+              <option>06</option>
+              <option>07</option>
+              <option>08</option>
+              <option>09</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+              <option>26</option>
+              <option>27</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>
+            </select>
+        </div>
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+            
+        </div>
+    </div>
+    <div class="row"  >
+            <div class="col-sm-4 ticketbox" ng-repeat="flights in flightDetails" >
+                  
+                           
+                           <div class="singleCol" style="position: relative;"  >
+                                <h4 style=" position: absolute; right: 30%;">{{flights.flightTo}}</h4>
+                               <img src="img/{{flights.flightbrand}}.jpg" style=" position: absolute; right: 30%; top:30%;">
+                              <h4>{{flights.flightFromG}}</h4> <h4 style=" position: absolute; right: 50%; top:0%"  >TO:</h4>
+                              <h6><b>R{{flights.flightPrice}}</b></h6>
+                              <span class="numberdisplay">{{flights.date}}<br></span>
+                              <a href="#!/groupDetails" class="btn btn-primary booknow" ng-click="bookedgroupFlight(flights)">Book Now</a>
+                         
+                   </div> 
+            </div>
+             
+        </div>
+</div>

@@ -1,0 +1,12 @@
+
+      {
+          "id":"AirTicket003",
+		  "flightNumber":"MN-110",
+          "flightbrand":"Klogo",
+          "flightDepature":"12:45pm",
+          "flightArrival":"02:45pm",
+          "flightFromG":"CapeTown",
+          "flightTo":"Joburg",
+          "flightPrice":"1460.00",
+          "date":"12 April 19"
+     }

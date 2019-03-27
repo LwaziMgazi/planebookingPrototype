@@ -1,0 +1,12 @@
+
+      {
+          "id":"AirTicket001",
+		  "flightNumber":"MN-104",
+          "flightbrand":"Klogo",
+          "flightDepature":"2:35pm",
+          "flightArrival":"4:35pm",
+          "flightFromG":"CapeTown",
+          "flightTo":"Joburg",
+          "flightPrice":"1512.60",
+          "date":"12 April 19"
+     }

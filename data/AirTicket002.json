@@ -1,0 +1,12 @@
+
+      {
+          "id":"AirTicket002",
+		  "flightNumber":"MN-106",
+          "flightbrand":"Klogo",
+          "flightDepature":"06:30pm",
+          "flightArrival":"08:30pm",
+          "flightFromG":"CapeTown",
+          "flightTo":"Joburg",
+          "flightPrice":"1478.00",
+          "date":"12 April 19"
+     }

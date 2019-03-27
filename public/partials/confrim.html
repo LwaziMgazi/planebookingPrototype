@@ -1,0 +1,97 @@
+<div class="container">
+        <div class="row">
+              <div class="col-sm-6">
+                <table class="table table-striped">
+                   <tr>
+                      <h2>Please Confirm your Details <br> </h2>
+                   </tr>
+                   <tr>
+                     <td>
+                       <strong><label >Title:</label> </strong>
+                     </td>
+                     <td>
+                        {{title}}
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>
+                         <strong><label>First Names:</label></strong>
+                     </td>
+                     <td>
+                        {{fname}}
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>
+                        <strong><label >Surname:</label></strong>
+                     </td>
+                     <td>
+                        {{lname}}
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>
+                        <strong><label>Email:</label></strong>
+                     </td>
+                     <td>
+                        {{email}}
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>
+                        <strong><label >Date of Birth:</label></strong>
+                     </td>
+                     <td>
+                        {{dob}}
+                     </td>
+                   </tr>
+                   <tr>
+                      <td>
+                        <strong><label for="cel_No">Phone:</label></strong>
+                      </td>
+                      <td>
+                          {{cel_No}}
+                      </td>
+                   </tr>
+                </table>
+              </div>
+                <div class="col-sm-6">
+                   <div class="billboard">
+                      <h2>Your Jorney</h2>
+                      <hr style="border:black 1px solid">
+                      <div class="flightbookedConfirmFrom" style="background-color:#FFD700; border:black 1px solid">
+                          <h3>{{FLIGHTFROM}}</h3>
+                          <h4>Date:{{DateTo}}</h4>
+                          <h4>Time:{{TimeFrom}}</h4>
+                      </div>
+                      TO
+                      <div class="fligthbookedTO" style="background-color:#FFD700; border:black 1px solid">
+                          <h3>{{FLIGHTTO}}</h3>
+                          <h4>Date:{{DateTo}}</h4>
+                          <h4>Time:{{TimeTo}}</h4>
+                      </div>
+                   </div>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-6" id="bookingForm">
+                  <form class="userform" action="https://www.payfast.co.za/eng/process" method="POST">
+                           <div class="col-md-12">
+                              <input type="hidden" name="merchant_id" value="11687257">
+                              <input type="hidden" name="merchant_key" value="qz3wkzdro7zdp">
+                              <input type="hidden" name="amount" value="5">
+                              <input type="hidden" name="item_name" value="Test Item">
+                              <input type="hidden" name="return_url" value="http://airstudents.herokuapp.com/#!/success/{{flightID}}/{{bookedPerson}}">
+                              <input type="hidden" name="cancel_url" value="http://airstudents.herokuapp.com/#!/unsucessful">
+                            </div>
+                            <input type="hidden" class="form-control" id="inputEmail4" placeholder="firstname" ng-model="client.firstname" name="name_first" value="{{fname}}">
+                            <input type="hidden" class="form-control" id="inputsurname" placeholder="surname" ng-model="client.surname" name="name_last" value="{{lname}}">
+                            <input type="hidden" class="form-control" id="inputemail" placeholder="Please enter email" ng-model="client.email" name="email_address" value="{{email}}">
+                            <input type="hidden" class="form-control" id="inputID" placeholder="Please Enter ID no" ng-model="client.ID" value="{{dob}}">
+                           <input type="hidden" class="form-control" id="inputAddress2" placeholder="Please Enter Cellphone no" ng-model="client.cellphone" name="cell_number" value="{{cel_No}}">
+                           <h6>Procceed to Payment </h6>
+                           <input type="submit" class="btn btn-primary" id="clientDetails" value="Payment">
+                    </form>
+                </div>
+              </div>
+</div>

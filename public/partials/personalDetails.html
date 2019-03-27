@@ -1,0 +1,61 @@
+<div class="container">
+        <div class="row">
+                <div class="col-sm-6" id="bookingForm">
+                  <form class="userform" >
+                   
+                        <div class="form-group col-md-12">
+                              <input type="hidden" name="merchant_id" value="11687257">
+                              <input type="hidden" name="merchant_key" value="qz3wkzdro7zdp">
+                              <input type="hidden" name="amount" value="1005.00">
+                              <input type="hidden" name="item_name" value="Test Item">
+                              <label for="inputTitle">Title:</label>
+                              <select id="inputTitle" required class="form-control" ng-model="client.title">
+                                <option>Mr.</option>
+                                <option>Mrs.</option>
+                              </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputEmail4">First Names:</label>
+                          <input type="text" class="form-control" id="inputEmail4" placeholder="firstname as in ID" ng-model="client.firstname" name="name_first" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputSurname">Surname:</label>
+                          <input type="text" class="form-control" id="inputsurname" placeholder="surname as in ID" ng-model="client.surname" name="name_last" required>
+                        </div>
+                    
+                      <div class="form-group col-md-6">
+                        <label for="inputAddress">Email:</label>
+                        <input type="email" class="form-control" id="inputemail" placeholder="Please enter email" ng-model="client.email" name="email_address">
+                      </div>
+                      <div  class="form-group col-md-6">
+                        <label for="inputID" >Date Of Birth:(yyyy/mm/dd)</label>
+                        <input type="text" class="form-control" id="inputID" placeholder="Please Enter date of Birth" ng-model="client.ID" required >
+                      </div>
+                      <div  class="form-group col-md-12">
+                          <label for="inputAddress2">Cellphone:</label>
+                          <input type="text" class="form-control" id="inputAddress2" placeholder="Please Enter Cellphone no" ng-model="client.cellphone" name="cell_number" required>
+                      </div>
+                      <div id="message"></div>
+                     <a  class="btn btn-primary booknow form-group" ng-click="clientDetails(client)" id="testSumbit">Procceed</a>
+                    
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                   <div class="billboard">
+                      <h2>Your Jorney</h2>
+                      <hr style="border:black 1px solid">
+                      <div class="flightbookedConfirmFrom" style="background-color:#FFD700; border:black 1px solid">
+                          <h3>{{FLIGHTFROM}}</h3> 
+                          <h4>Date:{{DateTo}}</h4>
+                          <h4>Time:{{TimeFrom}}</h4>
+                      </div>
+                      TO
+                      <div class="fligthbookedTO" style="background-color:#FFD700; border:black 1px solid">
+                          <h3>{{FLIGHTTO}}</h3>
+                          <h4>Date:{{DateTo}}</h4>
+                          <h4>Time:{{TimeTo}}</h4> 
+                      </div>
+                   </div>
+                </div>
+              </div> 
+</div>

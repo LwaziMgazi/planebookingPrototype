@@ -1,0 +1,12 @@
+
+      {
+          "id":"AirTicket004",
+		  "flightNumber":"MN-703",
+          "flightbrand":"Klogo",
+          "flightDepature":"09:35am",
+          "flightArrival":"11:35am",
+          "flightFromG":"CapeTown",
+          "flightTo":"Durban",
+          "flightPrice":"1696.50",
+          "date":"12 April 19"
+     }
