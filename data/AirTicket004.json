@@ -8,5 +8,6 @@
           "flightFromG":"CapeTown",
           "flightTo":"Durban",
           "flightPrice":"1696.50",
-          "date":"12 April 19"
+          "date":"12 April 19",
+		  "airportTo":"King Shaka"
      }

@@ -81,6 +81,7 @@ app.post('/aboutToBook',function(req,res){
     var email=req.body[1].email;
     var clientDOB=req.body[1].ID;
     var cell=req.body[1].cellphone;
+    var airport=req.body[0].airportTo;
 
     var bookedClient={
         'id':id,
@@ -94,13 +95,16 @@ app.post('/aboutToBook',function(req,res){
         'flightArrivalTime':flightArrival,
         'flightPrice':flightPrice,
         'DOB': clientDOB,
-        'cellPhone':cell
+        'cellPhone':cell,
+        'airport':airport,
+        'flightDepature':flightDepature,
+        'flightArrival':flightArrival
 
     }
 
-
+    console.log('\x1b[32m%s\x1b[0m',airport);
     Clients.create(cell,bookedClient,function(){
-      console.log('sucesss');
+      console.log('I made it');
     })
 
 
@@ -110,9 +114,9 @@ app.post('/aboutToBook',function(req,res){
 app.post('/success',function(req,res){
      //read data from file
      var bookedClientDetails=req.body.name;
-
-
-    Clients.read(bookedClientDetails,function(bookedClient){
+     console.log('\x1b[32m%s\x1b[0m',bookedClientDetails);
+     console.log("IM is the success route");
+  Clients.read(bookedClientDetails,function(bookedClient){
 
 
 
@@ -125,10 +129,13 @@ app.post('/success',function(req,res){
         var flightFrom=bookedClient.flyFrom;
         var flightTo=bookedClient.flyTo;
         var date=bookedClient.flyDate;
+        var airportTo=bookedClient.airport;
+        var timeD=bookedClient.flightDepature;
+        var timeA=bookedClient.flightArrival;
 
-        
+        console.log("Here is the list",title,firstname,Surname,email,clientDOB,cell);
 
-    const output= ' <h3>A new Client has Booked</h3><br><ul><li>Name:'+title+firstname+'</li><br><li>Surname:'+Surname+'</li><br><li>email:'+email+'</li><br><li>CellPhone:'+cell+'</li><br><li>DOB:'+clientDOB+'</li><br><li>Flying From:'+flightFrom +'</li><br><li>fly To:'+flightTo +'</li><li>Date: '+ date +'</li> </ul>'
+    const output= ' <h3>A new Client has Booked</h3><br><ul><li>Name:'+title+firstname+'</li><br><li>Surname:'+Surname+'</li><br><li>email:'+email+'</li><br><li>CellPhone:'+cell+'</li><br><li>DOB:'+clientDOB+'</li><br><li>Flying From:'+flightFrom +'</li><br><li>fly To:'+flightTo +'</li><li>Date: '+ date +'</li><li>Arrival Airport: '+ airportTo +'</li><li>Time Depature: '+ timeD +'</li><li>Time Arrival: '+ timeA +'</li> </ul>'
 
      //create reusable transporter object using the defualt SMTP transport
 
@@ -149,7 +156,7 @@ app.post('/success',function(req,res){
 //setup mail data with unicorn symbols
   let mailOptions={
    from: '"Air Student "<ntshangasent@gmail.com>',//sender address
-   to:'lwazi@circumfort.co.za,ntshangasent@gmail.com,nntshangase3@gmail.com ',//list of receiver
+   to:'ntshangasent@gmail.com',//list of receiver
    subject:'New Bookings',
    text:'Hello World!',
    html: output// html body
