@@ -179,7 +179,6 @@ app.post('/success',function(req,res){
 
 app.delete('/removedBooked/:id',function(req,res){
   var id =req.params.id;
-  console.log(id);
 
   ticketData.delete(id,function(err){
     if(err)
